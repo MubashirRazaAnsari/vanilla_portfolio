@@ -1,15 +1,24 @@
 {
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "lite-server",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "lite-server"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.7",
     "es6-promise": "^4.2.8"
   },
   "devDependencies": {
     "@types/es6-promise": "^3.3.2",
     "lite-server": "^2.6.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
