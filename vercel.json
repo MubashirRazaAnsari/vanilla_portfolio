@@ -14,11 +14,45 @@
       "use": "@vercel/static"
     },
     {
+      "src": "*.svg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.ico",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "site.webmanifest",
+      "use": "@vercel/static"
+    },
+    {
       "src": "assets/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/favicon.svg",
+      "headers": {
+        "content-type": "image/svg+xml"
+      },
+      "dest": "/favicon.svg"
+    },
+    {
+      "src": "/site.webmanifest",
+      "headers": {
+        "content-type": "application/json"
+      },
+      "dest": "/site.webmanifest"
+    },
     {
       "src": "/script.js",
       "headers": {
