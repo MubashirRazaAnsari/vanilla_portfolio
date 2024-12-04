@@ -11,7 +11,7 @@
     },
     {
       "src": "*.js",
-      "use": "@vercel/node"
+      "use": "@vercel/static"
     },
     {
       "src": "assets/**",
@@ -19,6 +19,14 @@
     }
   ],
   "routes": [
+    {
+      "src": "/script.js",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "application/javascript"
+      },
+      "dest": "/script.js"
+    },
     {
       "src": "/styles.css",
       "headers": {
