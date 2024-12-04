@@ -6,14 +6,34 @@
       "use": "@vercel/static"
     },
     {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
       "src": "*.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/styles.css",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/css"
+      },
+      "dest": "/styles.css"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/$1"
     }
   ]
 } 
